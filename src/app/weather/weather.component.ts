@@ -13,6 +13,7 @@ export class WeatherComponent implements OnInit{
   login:string='';
   constructor(private http: HttpClient) {}
   model:string = '';
+  time:Date = new Date();
   ngOnInit():void{
     this.http.get('https://api-feedback-service.dev.spec.honeywell.com/apps')
     .subscribe(
