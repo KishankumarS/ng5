@@ -1,0 +1,16 @@
+.life-container{
+  background: #3FA0E1;
+  padding: 1em;
+  font-weight: bold;
+  cursor: pointer;
+}
+.col{
+  padding: .4em 1.3em;
+}
+.container{
+  display: grid;
+  grid-template-columns: 50% auto;
+}
+pre{
+  background: rgb(36, 39, 41);
+}

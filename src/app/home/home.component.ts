@@ -37,12 +37,14 @@ itemCount: number;
 btnTxt: string = "Add an Item";
 goalText: string = "My first life goal";
 goals =[];
+
   constructor( private _data: DataService) { }
 
   ngOnInit() {
     this._data.goal.subscribe(res => this.goals = res);
       this.itemCount = this.goals.length;
     this._data.changeGoal(this.goals);
+
   }
   addItem(){
     this.goals.push(this.goalText);
@@ -54,5 +56,6 @@ goals =[];
     this.goals.splice(i, 1);
     this._data.changeGoal(this.goals);
   }
+
 
 }

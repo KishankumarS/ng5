@@ -1,16 +1,15 @@
 import { Injectable } from '@angular/core';
 import {BehaviorSubject} from 'rxjs/BehaviorSubject';
+
 @Injectable()
+export class NewService {
 
-export class DataService {
-
-  private goals = new BehaviorSubject<any>(['Vaue1', 'Value2']);
-  goal  = this.goals.asObservable();
+  private goals = new BehaviorSubject<any>(["Hello Bhuvan!", "Hello Jyo!"]);
+  goal = this.goals.asObservable();
 
   constructor() { }
 
   changeGoal(goal){
     this.goals.next(goal);
   }
-
 }

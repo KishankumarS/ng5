@@ -1,0 +1,17 @@
+
+  <div class="container color-light">
+    <div class="col">
+      <p class="sm">Add Item by using below function:</p>
+      <form>
+        <input name="item" type="text" class="txt" placeholder="Life Goal.." [(ngModel)]="goalText">
+        <input type="submit" class="btn" [value]="btnTxt" (click)="addItem()">
+      </form>
+    </div>
+    <div class="col">
+      <p>Added items will shown here:</p>
+      <p class="life-container" *ngFor="let t of goals; let i =index" (click)="removeItem(i)" >
+        {{ t }}
+      </p>
+    </div>
+  </div>
+  
