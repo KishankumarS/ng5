@@ -7,6 +7,7 @@
         <input type="submit" class="btn" [value]="btnTxt" (click)="addItem()">
       </form>
     </div>
+  
     <div class="col">
       <p>Added items will shown here:</p>
       <p class="life-container" *ngFor="let t of goals; let i =index" (click)="removeItem(i)" >

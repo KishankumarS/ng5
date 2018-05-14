@@ -15,9 +15,9 @@ export class WeatherComponent implements OnInit{
   model:string = '';
   time:Date = new Date();
   ngOnInit():void{
-    this.http.get('https://api-feedback-service.dev.spec.honeywell.com/apps')
+    this.http.get('your API url')
     .subscribe(
-      data => { 
+      data => {
         for(let j of Object(data)){
           this.tex =j.name;
           console.log("Name: "+j.name);
@@ -43,6 +43,6 @@ export class WeatherComponent implements OnInit{
     err =>{
       console.log("Error Occured");
     }
-  ) 
+  )
 }
 }
