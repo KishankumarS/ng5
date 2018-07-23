@@ -17,6 +17,9 @@ import { FromService } from './from.service';
 import { WeatherComponent } from './weather/weather.component';
 import {HttpClientModule} from '@angular/common/http';
 import {HttpModule} from '@angular/http';
+import { SelectDropDownModule } from 'ngx-select-dropdown';
+import { SpecialComponent } from './special/special.component';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +29,8 @@ import {HttpModule} from '@angular/http';
     AboutComponent,
     Angular5Component,
     FromComponent,
-    WeatherComponent
+    WeatherComponent,
+    SpecialComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +38,7 @@ import {HttpModule} from '@angular/http';
     FormsModule,
     BrowserAnimationsModule,
     NgbModule.forRoot(),
-    ReactiveFormsModule,HttpClientModule, HttpModule
+    ReactiveFormsModule,HttpClientModule, HttpModule,SelectDropDownModule
   ],
   providers: [DataService,NewService,FromService,HttpClientModule],
   bootstrap: [AppComponent]

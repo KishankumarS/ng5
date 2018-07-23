@@ -15,12 +15,12 @@ export class WeatherComponent implements OnInit{
   model:string = '';
   time:Date = new Date();
   ngOnInit():void{
-    this.http.get('your API url')
+    this.http.get('https://jsonplaceholder.typicode.com/posts')
     .subscribe(
       data => {
         for(let j of Object(data)){
-          this.tex =j.name;
-          console.log("Name: "+j.name);
+          this.tex =j.title;
+          console.log("id: "+j.title);
         }
     },(err:HttpErrorResponse)=>{
       if(err.error instanceof Error){

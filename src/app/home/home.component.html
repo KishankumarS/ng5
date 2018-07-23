@@ -20,3 +20,30 @@
     </p>
   </div>
 </div>
+<div class="row white content" *ngIf="tab==1" style="width: 50%">
+    <div class="col s12">
+      <h3>Demos</h3>
+      <h5>Single Select Dropdown</h5>
+      <div class="row">
+        <div class="col s12 l6">
+            <ngx-select-dropdown [multiple]="false" [(value)]="singleSelect" [config]="config" [options]="options"></ngx-select-dropdown>
+        </div>
+        <div class="col s12 l6 flow-text" >
+          <p style="margin: 0;">Balance of selected user: {{singleSelect[0]?.balance}}</p>
+        </div>
+      </div>
+
+      <h5>Multi Select Dropdown</h5>
+      <div class="row">
+        <div class="col s12 l6">
+            <ngx-select-dropdown (change)="changeValue($event)" [multiple]="true" [(value)]="multiSelect" [config]="config" [options]="options"></ngx-select-dropdown>
+        </div>
+        <div class="col s12 l6 flow-text" >
+          <p style="margin: 0;">Selected Options:-</p>
+          <p style="margin: 0;" *ngFor="let user of multiSelect"><strong>Name:</strong> {{user.name}} , <strong>Balance:</strong> {{user.balance}}</p>
+        </div>
+      </div>
+
+      </div>
+
+</div>

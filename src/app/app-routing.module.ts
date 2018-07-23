@@ -6,6 +6,7 @@ import { AboutComponent } from './about/about.component';
 import { Angular5Component } from './angular5/angular5.component';
 import { FromComponent } from './from/from.component';
 import { WeatherComponent } from './weather/weather.component';
+import { SpecialComponent } from './special/special.component';
 const routes: Routes = [
   {
     path: '',
@@ -34,6 +35,10 @@ const routes: Routes = [
   {
     path: 'from',
     component: FromComponent
+  },
+  {
+    path: 'special',
+    component: SpecialComponent
   }
 
 ];
