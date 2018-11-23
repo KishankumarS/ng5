@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SpecialComponent } from './special.component';
+import { PopComponent } from './pop.component';
 
-describe('SpecialComponent', () => {
-  let component: SpecialComponent;
-  let fixture: ComponentFixture<SpecialComponent>;
+describe('PopComponent', () => {
+  let component: PopComponent;
+  let fixture: ComponentFixture<PopComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SpecialComponent ]
+      declarations: [ PopComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SpecialComponent);
+    fixture = TestBed.createComponent(PopComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,5 +1,12 @@
-
-
+.simple{
+  padding: .4em 1.3em 5em;
+}
+.life-container{
+  background-color: antiquewhite;
+}
+.sos{
+  background-color: azure;
+}
 .container{
     display: grid;
     grid-template-columns: 50% auto;

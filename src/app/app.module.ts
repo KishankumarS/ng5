@@ -12,14 +12,14 @@ import { HomeComponent } from './home/home.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { Angular5Component } from './angular5/angular5.component';
 import { NewService } from './new.service';
-import { FromComponent } from './from/from.component';
+import { DropdownComponent } from './dropdown/dropdown.component';
 import { FromService } from './from.service';
 import { WeatherComponent } from './weather/weather.component';
 import {HttpClientModule} from '@angular/common/http';
 import {HttpModule} from '@angular/http';
 import { SelectDropDownModule } from 'ngx-select-dropdown';
-import { SpecialComponent } from './special/special.component';
-
+import { PopComponent } from './pop/pop.component';
+import { ModalModule } from 'ngx-bootstrap';
 
 @NgModule({
   declarations: [
@@ -28,17 +28,17 @@ import { SpecialComponent } from './special/special.component';
     GalleryComponent,
     AboutComponent,
     Angular5Component,
-    FromComponent,
+    DropdownComponent,
     WeatherComponent,
-    SpecialComponent
+    PopComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
-    NgbModule.forRoot(),
-    ReactiveFormsModule,HttpClientModule, HttpModule,SelectDropDownModule
+    NgbModule.forRoot(),ModalModule.forRoot(),
+    ReactiveFormsModule,HttpClientModule, HttpModule,SelectDropDownModule,ModalModule
   ],
   providers: [DataService,NewService,FromService,HttpClientModule],
   bootstrap: [AppComponent]

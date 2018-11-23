@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import {DataService} from '../data.service';
 
 @Component({
-  selector: 'app-special',
-  templateUrl: './special.component.html',
-  styleUrls: ['./special.component.scss']
+  selector: 'app-pop',
+  templateUrl: './pop.component.html',
+  styleUrls: ['./pop.component.scss']
 })
-export class SpecialComponent implements OnInit {
+export class PopComponent implements OnInit {
   goals =[];
   constructor(private _data: DataService) {
 

@@ -1,8 +1,5 @@
 import { Component, OnInit  } from '@angular/core';
 import {NewService} from '../new.service';
-import { ActivatedRoute } from '@angular/router';
-import { Router } from '@angular/router';
-import { FromService } from '../from.service';
 
 @Component({
   selector: 'app-gallery',
@@ -12,13 +9,13 @@ import { FromService } from '../from.service';
 export class GalleryComponent implements OnInit {
   message:string;
   goals =[];
-  constructor( private _new: NewService, private _from:FromService) { }
+  constructor( private _new: NewService) { }
 
   ngOnInit() {
     this._new.goal.subscribe(res => this.goals = res);
     this._new.changeGoal(this.goals);
-    this._from.currentMessage.subscribe(message=> this.message = message);
   }
-  
-
+  removeItem(i){
+    this.goals.splice(i, 1);
+  }
 }

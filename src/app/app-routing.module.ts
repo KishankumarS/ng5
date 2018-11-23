@@ -4,9 +4,9 @@ import { HomeComponent } from './home/home.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { AboutComponent } from './about/about.component';
 import { Angular5Component } from './angular5/angular5.component';
-import { FromComponent } from './from/from.component';
+import { DropdownComponent } from './dropdown/dropdown.component';
 import { WeatherComponent } from './weather/weather.component';
-import { SpecialComponent } from './special/special.component';
+import { PopComponent } from './pop/pop.component';
 const routes: Routes = [
   {
     path: '',
@@ -26,7 +26,7 @@ const routes: Routes = [
   },
   {
     path: 'from',
-    component: FromComponent
+    component: DropdownComponent
   },
   {
     path: 'weather',
@@ -34,11 +34,11 @@ const routes: Routes = [
   },
   {
     path: 'from',
-    component: FromComponent
+    component: DropdownComponent
   },
   {
-    path: 'special',
-    component: SpecialComponent
+    path: 'pop',
+    component: PopComponent
   }
 
 ];
